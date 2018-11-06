@@ -1,0 +1,29 @@
+.navbar-brand{
+    color: #6497b1;
+    font-weight: bold;
+    font-size: 32px;
+}
+.navbar-brand:hover{
+    color:#003366;
+}
+.navbar-brand span{
+    color: #e65540;
+}
+#navbarSupportedContent li > a{
+    font-family: 'Montserrat';
+}
+#navbarSupportedContent li:hover{
+    text-decoration: underline;
+}
+#navbarSupportedContent .navbar-nav{
+    font-size: 15px;
+}
+.linedivide1 {
+    display: block;
+    height: 20px;
+    width: 1px;
+    background-color: #e5e5e5;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
