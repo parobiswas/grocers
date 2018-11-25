@@ -11,10 +11,15 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import {environment} from '../environments/environment';
 import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './services/auth-guard.service';
+import { CheckOutComponent } from './check-out/check-out.component';
+import { OrderSuccessComponent } from './order-success/order-success.component';
 
 const routes = [
   {path:''  , component: HomeComponent},
-  {path:'login'  , component: LoginComponent}
+  {path:'login'  , component: LoginComponent},
+  {path:'check-out'  , component: CheckOutComponent , canActivate: [AuthGuardService]},
+  {path:'order-success'  , component: OrderSuccessComponent , canActivate: [AuthGuardService]}
 ];
 
 @NgModule({
@@ -22,7 +27,9 @@ const routes = [
     AppComponent,
     NavbarComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    CheckOutComponent,
+    OrderSuccessComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,10 @@ const routes = [
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    AuthGuardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
