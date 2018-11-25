@@ -1,0 +1,12 @@
+.login-background{
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('..\images\coffee-background.png');
+}
+.button-icon{
+    background: #000 url('..\images\icon-google.png') 10px center no-repeat;
+    padding-left: 50px;
+    border: 1px solid rgb(83, 79, 79);
+}
